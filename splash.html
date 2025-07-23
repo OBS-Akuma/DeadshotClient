@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Splash</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .splash-container {
+      width: 100%;
+      height: 100%;
+      background-image: url("https://deadshot.io/promo/background4.webp");
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(18px);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-app-region: drag;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+      -webkit-app-region: no-drag;
+    }
+
+    .gif {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .logo {
+      display: none;
+      margin-top: 25px;
+      width: 240px;
+      border-radius: 12px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-container">
+    <div class="content">
+      <img class="gif" id="loadingGif" src="https://badges.vencord.dev/badges/127847358175248384/2-110aee13723c3a614258c7a706dba25f8ffe6b58.gif">
+      <img class="logo" id="logo" src="https://deadshot.io/promo/logo.webp">
+    </div>
+  </div>
+
+  <script>
+    const loadingGif = document.getElementById('loadingGif');
+    const logo = document.getElementById('logo');
+
+    loadingGif.onload = () => {
+      setTimeout(() => {
+        logo.style.display = 'block';
+      }, 3500); // Reveal logo 1.5s before splash ends
+    };
+  </script>
+</body>
+</html>

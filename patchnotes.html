@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deadshot Client Patch Notes</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap');
+
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(20, 20, 20, 0.9);
+      border-radius: 24px;
+      padding: 40px 50px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow:
+        0 8px 24px rgba(255, 75, 43, 0.25),
+        inset 0 0 60px rgba(255, 75, 43, 0.3);
+      backdrop-filter: blur(12px);
+      animation: slideUpFade 0.8s ease forwards;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255, 75, 43, 0.8);
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #ddd;
+      text-align: left;
+      margin: 0 auto 40px;
+      max-width: 580px;
+    }
+
+    /* Custom bullet list style */
+    p strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #ff5e45;
+      text-shadow: 0 0 6px rgba(255, 94, 69, 0.8);
+    }
+
+    p br {
+      content: "";
+      margin: 8px 0;
+    }
+
+    .back-button {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      border: none;
+      border-radius: 14px;
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 600;
+      padding: 14px 42px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow:
+        0 4px 15px rgba(255, 75, 43, 0.5),
+        0 0 8px rgba(255, 75, 43, 0.7);
+      letter-spacing: 1.1px;
+      user-select: none;
+    }
+    .back-button:hover,
+    .back-button:focus {
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      box-shadow:
+        0 6px 25px rgba(255, 94, 69, 0.8),
+        0 0 12px rgba(255, 94, 69, 1);
+      outline: none;
+      transform: scale(1.05);
+    }
+
+    @keyframes slideUpFade {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .card {
+        padding: 30px 25px;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .back-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main" aria-label="Deadshot Client Patch Notes">
+    <h1>Deadshot Client Patch Notes</h1>
+    <p>
+      Welcome to the Deadshot Client!<br /><br />
+      <strong>v1.0.0 - Initial Release</strong><br />
+      • Custom splash screen<br />
+      • Fullscreen launch<br />
+      • Menu bar removed<br />
+      • This patch notes screen overrides the changelog<br />
+      • More features coming soon!
+    </p>
+    <button class="back-button" onclick="window.location.href='https://deadshot.io'" aria-label="Back to Deadshot game">
+      Back to Game
+    </button>
+  </div>
+</body>
+</html>

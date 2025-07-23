@@ -1,0 +1,19 @@
+{
+  "name": "deadshot-client",
+  "version": "1.0.0",
+  "description": "Deadshot Client by Akuma (ppugclay / 1169111190824308768)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^29.0.0"
+  },
+  "author": "Akuma",
+  "license": "MIT",
+  "dependencies": {
+    "build": "^0.1.4",
+    "npm": "^11.4.2",
+    "run": "^1.5.0"
+  }
+}
